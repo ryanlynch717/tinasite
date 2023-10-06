@@ -15,5 +15,8 @@
     "autoprefixer": "^10.4.16",
     "sass": "^1.69.0",
     "tinacms": "^1.5.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2"
   }
 }
