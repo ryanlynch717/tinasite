@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "tinacms": "^1.5.21",
     "@tinacms/cli": "^1.5.30",
     "astro": "^2.10.15",
     "autoprefixer": "^10.4.16",
-    "sass": "^1.69.0",
-    "tinacms": "^1.5.21"
+    "sass": "^1.69.0"
   },
   "devDependencies": {
     "@types/node": "^20.8.2"

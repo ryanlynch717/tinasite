@@ -8,6 +8,7 @@ npm run dev
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
-## TinaCMS learn more
+
+## TinaCMS learn more
 
 Check out the [TinaCMS docs](https://tina.io/docs/)
