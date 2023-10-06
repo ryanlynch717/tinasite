@@ -1,0 +1,19 @@
+{
+  "name": "astroportfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "tinacms dev -c 'astro dev'",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tinacms/cli": "^1.5.30",
+    "astro": "^2.10.15",
+    "autoprefixer": "^10.4.16",
+    "sass": "^1.69.0",
+    "tinacms": "^1.5.21"
+  }
+}
