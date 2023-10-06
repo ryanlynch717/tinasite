@@ -2,8 +2,6 @@
 title: YAY! New site has lift-off
 ---
 
-Hey! Welcome back, we're pleased to announce that our new site has now launched!
+## Hello world!
 
-```javascript
-<p>Hello world!</p>
-```
+Hey! Welcome back to the blog, we're pleased to announce today.. *drumroll* that our new site has officially launched! It's now blazingly fast to load! More updates coming soon, so keep an eye out!

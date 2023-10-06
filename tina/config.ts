@@ -19,7 +19,7 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
+        name: "posts",
         label: "Posts",
         path: "src/content/posts",
         fields: [
@@ -45,7 +45,7 @@ export default defineConfig({
         ],
       },
       {
-        name: "author",
+        name: "authors",
         label: "Authors",
         path: "content/authors",
         fields: [

@@ -1,18 +1,18 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
+import Pill from '../../components/Pill.astro';
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/posts/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const posts = await Astro.glob('../content/posts/*.{md,mdx}');
+	const posts = await Astro.glob('../../content/posts/*.{md,mdx}');
 
 	return posts.map((post) => ({
-		params: { slug: post.file.split('/').pop().replace(/\.md(x)?/,'') },
+		params: { post: post.file.split('/').pop().replace(/\.md(x)?/,'') },
 		props: { post },
 	}));
 }
@@ -25,7 +25,7 @@ const { frontmatter, Content } = Astro.props.post;
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/posts/"><Icon icon="arrow-left" /> Posts</a>
+					<a class="back-link" href="/"><Icon icon="arrow-left" /> Blog</a>
 					<Hero title={frontmatter.title} align="start">
 						<div class="details">
 							<p class="description">{frontmatter.description}</p>

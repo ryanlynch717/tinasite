@@ -1,17 +1,16 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
-import Grid from '../components/Grid.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
 
-const posts = (await Astro.glob('../content/posts/*.{md,mdx}'))
+const posts = (await Astro.glob('../../content/posts/*.{md,mdx}'))
 	.sort((a, b) => b.data?.publishDate?.valueOf() - a.data?.publishDate?.valueOf())
-
 ---
 
 <BaseLayout
 	title="Posts"
-	description="Learn about Jeanine White's most recent projects"
+	description="Take a look at the most recent updates from the blog"
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
@@ -24,7 +23,7 @@ const posts = (await Astro.glob('../content/posts/*.{md,mdx}'))
 				{
 					posts.map((post) => (
 						<li class="blog-card">
-							<a href={post.file.split('/').pop().replace(/\.md(x)?/,'')}>{post.frontmatter.title}</a>
+							<a href={`./${post.file.split('/').pop().replace(/\.md(x)?/,'')}`}>{post.frontmatter.title}</a>
 						</li>
 					))
 				}
