@@ -12,7 +12,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "uploads",
       publicFolder: "public",
     },
   },
@@ -21,7 +21,7 @@ export default defineConfig({
       {
         name: "post",
         label: "Posts",
-        path: "content/posts",
+        path: "src/content/posts",
         fields: [
           {
             type: "string",
@@ -29,6 +29,12 @@ export default defineConfig({
             label: "Title",
             isTitle: true,
             required: true,
+          },
+          {
+            type: "datetime",
+            name: "publishDate",
+            label: "Publish Date",
+            required: false,
           },
           {
             type: "rich-text",
