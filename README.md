@@ -1,4 +1,4 @@
-# Astro site starter - React, SaaS and TinaCMS
+# Astro site starter - React, SASS and TinaCMS
 
 ```sh
 npm run dev
