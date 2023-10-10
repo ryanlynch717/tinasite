@@ -23,7 +23,12 @@ const posts = (await Astro.glob('../../content/posts/*.{md,mdx}'))
 				{
 					posts.map((post) => (
 						<li class="blog-card">
-							<a href={`./${post.file.split('/').pop().replace(/\.md(x)?/,'')}`}>{post.frontmatter.title}</a>
+              <div class="blog-card-top">
+                <a href={`./${post.file.split('/').pop().replace(/\.md(x)?/,'')}`}>{post.frontmatter.title}</a>
+              </div>
+              <div class="blog-card-bottom">
+                <p>lorem ipsum</p>
+              </div>
 						</li>
 					))
 				}
@@ -33,13 +38,36 @@ const posts = (await Astro.glob('../../content/posts/*.{md,mdx}'))
 	</div>
 </BaseLayout>
 
-<style>
+<style type="scss">
 .blog-card {
-	background: rgb(192, 187, 187);
-	border-radius: 0.5rem;
-	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-	padding: 1rem;
+  display: flex;
+  flex-direction: column;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 0.3rem rgba(235, 232, 232, 0.557);
+  transition: 0.3s;
 	min-height: 120px;
 	color: black;
+
+  &:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  }
+
+  .blog-card-top {
+    background-color: rgb(179, 179, 237);
+    align-items: center;
+    padding: 8px;
+    border-top-right-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
+  }
+
+  .blog-card-bottom {
+    display: flex;
+    height: 100%;
+    padding: 8px;
+    flex-direction: row;
+    background-color: rgb(233, 225, 225);
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
 }
 </style>
